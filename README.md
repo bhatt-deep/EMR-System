@@ -17,5 +17,9 @@ This will install the dependencies inside node_modules
 Runs the app in the development mode.
 Open http://localhost:5000 to view it in the browser.
 
+## Testing
+For testing purpose, I have included Restful Apis collection in Test folder.
 
+## Documents
+Project related documents are stored here.
 
