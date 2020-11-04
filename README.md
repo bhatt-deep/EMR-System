@@ -23,3 +23,5 @@ For testing purpose, I have included Restful Apis collection in Test folder.
 ## Documents
 Project related documents are stored here.
 
+## Database Schema
+![alt text](https://github.com/bhatt-deep/EMR-System/blob/main/emr_final.png?raw=true)
