@@ -1,0 +1,2284 @@
+{
+	"info": {
+		"_postman_id": "6cf14d70-55a0-4d13-a126-6946cc1b1360",
+		"name": "CSBC1010_FINALPROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Encounter",
+			"item": [
+				{
+					"name": "ADD Encounter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Encounter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"encounter_id\": 1,\r\n        \"last_updated\": \"2020-11-04T02:45:59.000Z\",\r\n        \"reason\": \"fever\",\r\n        \"status\": \"low\",\r\n        \"note\": \"chances of dangue\",\r\n        \"patient_id\": 3,\r\n        \"user_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Encounter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Encounter by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Encounter by patient ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter/patient/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter",
+								"patient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Encounter by user ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Encounter by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "fever",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "chances of dangue",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/encounter/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"encounter",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Medical Usage",
+			"item": [
+				{
+					"name": "ADD Medical Usage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Medical Usage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Medical Usage by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Medical Usage by history Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage/history/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage",
+								"history",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Medical Usage by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Medical Usage by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication_name",
+									"value": "lipitor 10 mg",
+									"type": "text"
+								},
+								{
+									"key": "medication_dose",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "medication_frequency",
+									"value": "1 tab everyday",
+									"type": "text"
+								},
+								{
+									"key": "history_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/medication_usage/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"medication_usage",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "ADD User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jay",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Patel",
+									"type": "text"
+								},
+								{
+									"key": "permissions",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "passhash",
+									"value": "jay@1995",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "17/12/1995",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "streetaddress",
+									"value": "237",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Barrie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "zipcode",
+									"value": "322025",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "ON",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cellphone",
+									"value": "7053458061",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "jay@gmail.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Patient By User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"user_id\": 1,\r\n        \"patient_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Deep\",\r\n        \"username\": \"Patel\",\r\n        \"permissions\": \"user\",\r\n        \"passhash\": \"jay@1995\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jay",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Patel",
+									"type": "text"
+								},
+								{
+									"key": "permissions",
+									"value": "Mr.",
+									"type": "text"
+								},
+								{
+									"key": "passhash",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "17/12/1995",
+									"type": "text"
+								},
+								{
+									"key": "streetaddress",
+									"value": "237",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Barrie",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "322025",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "ON",
+									"type": "text"
+								},
+								{
+									"key": "cellphone",
+									"value": "7053458061",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jay@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "ADD Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "fname",
+									"value": "Jay",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "Patel",
+									"type": "text"
+								},
+								{
+									"key": "prefix",
+									"value": "Mr.",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "17/12/1995",
+									"type": "text"
+								},
+								{
+									"key": "streetaddress",
+									"value": "237",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Barrie",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "322025",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "ON",
+									"type": "text"
+								},
+								{
+									"key": "cellphone",
+									"value": "7053458061",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jay@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/patient/:ID",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/patient/:ID",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n       \r\n        \"fname\": \"Jay\",\r\n        \"lname\": \"Patel\",\r\n        \"prefix\": \"Mr.\",\r\n        \"gender\": \"male\",\r\n        \"dob\": \"1995-11-15\",\r\n        \"streetaddress\": \"237\",\r\n        \"city\": \"Barrie\",\r\n        \"zipcode\": \"322025\",\r\n        \"state\": \"ON\",\r\n        \"cellphone\": \"7053458061\",\r\n        \"email\": \"jay@gmail.com\",\r\n        \"last_updated\": \"2020-11-03T09:35:46.000Z\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient/:ID",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Diagnostic Report",
+			"item": [
+				{
+					"name": "ADD Diagnostic Report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Diagnostic Report",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Diagnostic Report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Diagnostic Report by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Diagnostic Report by Patient ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report/patient/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report",
+								"patient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Diagnostic Report by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "respiratory_rate",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "oxygen_saturation",
+									"value": "70.",
+									"type": "text"
+								},
+								{
+									"key": "supplemental_oxygen",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "body_temperature",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "systolic_bp",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "heart_rate",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "level_of_consciousness",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/diagnostic_report/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"diagnostic_report",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Patient History",
+			"item": [
+				{
+					"name": "ADD Patient History",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Patient History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient History By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient History By User ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient History By Patient ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history/patient/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history",
+								"patient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient History By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient History By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "immunisations",
+									"value": "polio, corona",
+									"type": "text"
+								},
+								{
+									"key": "medical_issues",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "surgical_operations",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "peanuts",
+									"type": "text"
+								},
+								{
+									"key": "exercise_frequency",
+									"value": "daily",
+									"type": "text"
+								},
+								{
+									"key": "drinks_alcohol",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "tobacco_used_past_5_years",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "uses_recreational_drugs",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "mental_health_history",
+									"value": "normal",
+									"type": "text"
+								},
+								{
+									"key": "family_history",
+									"value": "NA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/patient_history/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"patient_history",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
