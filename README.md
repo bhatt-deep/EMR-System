@@ -8,10 +8,9 @@ Please create database by running emr_final.sql and make the changes in the conf
 
 In the project directory, you can run:
 
-# npm install
+**npm install**
 This will install the dependencies inside node_modules
-
-## node server.js OR nodemon start OR npm start
+**node server.js OR nodemon start OR npm start**
 Runs the app in the development mode.
 Open http://localhost:5000 to view it in the browser.
 
