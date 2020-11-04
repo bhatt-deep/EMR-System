@@ -3,8 +3,8 @@ This project is aims to create CRUD APIs for Electronic Medical Record managemen
 
 In this repo I have created the restful api using nodejs, express and mysql for health records management system.
 
-MySQL configuration
-Please create database by running emr_final.sql and make the changes in the config/db.config.js file.
+## MySQL configuration
+Please create database by running DB/emr_final.sql and make the changes in the config/db.config.js file.
 
 In the project directory, you can run:
 
